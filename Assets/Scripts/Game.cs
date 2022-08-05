@@ -57,6 +57,8 @@ namespace Client
             systems.Add(new SpawnIfDeadSystem());
             systems.Add(new SpawnSystem());
 
+            systems.Add(new KeepDistanceSystem());
+
 
             #if UNITY_EDITOR
                 systems.Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem());
