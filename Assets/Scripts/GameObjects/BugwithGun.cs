@@ -28,9 +28,11 @@ namespace Client
             ref var triggers = ref ecsWorld.GetPool<Triggers>().Add(entity.index);
             ref var collisions = ref ecsWorld.GetPool<Collisions>().Add(entity.index);
             ref var health = ref ecsWorld.GetPool<Health>().Add(entity.index);
+            ref var impactDamage = ref ecsWorld.GetPool<ImpactDamage>().Add(entity.index);
             ref var createWeapon = ref ecsWorld.GetPool<CreateWeapon>().Add(entity.index);
             ref var spawner = ref ecsWorld.GetPool<Spawner>().Add(entity.index);
             ref var controller = ref ecsWorld.GetPool<BugController>().Add(entity.index);
+
 
             ref var inventory = ref ecsWorld.GetPool<InventoryComponent>().Add(entity.index);
             inventory.items = new List<Entity>();
@@ -52,7 +54,7 @@ namespace Client
             collisions.entities = new HashSet<Entity>();
             health.maxValue = hp;
             health.value = hp;
-            //impactDamage.hits = new List<float>();
+            impactDamage.hits = new List<float>();
             spawner.target = DeadBlob;
         }
 
