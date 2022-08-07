@@ -28,6 +28,7 @@ namespace Client
             systems.Add(new PositionLikeParentSystem());
             systems.Add(new DirectionAtTargetSystem());
             systems.Add(new VelocityByDirectionSystem());
+            systems.Add(new JoystickMovementComponentSystem());
             systems.Add(new AnimationSpeedByVelocitySystem());
 
             systems.Add(new CreateWeaponSystem());

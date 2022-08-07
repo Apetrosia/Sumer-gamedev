@@ -12,12 +12,14 @@ namespace Client
         public float hp = 10;
         public float speed = 5;
         public GameObject defaultWeapon;
+        public FixedJoystick joystick;
 
         public override void InitEntity(EcsWorld ecsWorld)
         {
             base.InitEntity(ecsWorld);
 
             ref var body = ref ecsWorld.GetPool<BodyComponent>().Add(entity.index);
+            ref var js = ref ecsWorld.GetPool<JoystickMovementComponent>().Add(entity.index);
             ecsWorld.GetPool<VelocityByKeyboard>().Add(entity.index); // создаем компонент
             ref var speed = ref ecsWorld.GetPool<Speed>().Add(entity.index);
             ref var createWeapon = ref ecsWorld.GetPool<CreateWeapon>().Add(entity.index);
@@ -31,6 +33,7 @@ namespace Client
 
             
             body.value = GetComponent<Rigidbody2D>();
+            js.joystick = joystick;
             speed.value = this.speed;
             createWeapon.weapon = defaultWeapon;
             health.value = hp;
