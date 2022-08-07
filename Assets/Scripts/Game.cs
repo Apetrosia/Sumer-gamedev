@@ -41,6 +41,7 @@ namespace Client
 
             systems.Add(new DamageParticleCollidedSystem());
             systems.Add(new ImpactDamageSystem());
+            systems.Add(new HPBarSystem());
 
             systems.Add(new DeadSystem());
             systems.Add(new DeadByHealthSystem());

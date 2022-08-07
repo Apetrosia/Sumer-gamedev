@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Leopotam.EcsLite;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 namespace Client
@@ -12,6 +13,7 @@ namespace Client
         public float hp = 10;
         public float speed = 5;
         public GameObject defaultWeapon;
+        public Text HPBarTextobject;
 
         public override void InitEntity(EcsWorld ecsWorld)
         {
@@ -27,6 +29,7 @@ namespace Client
             ecsWorld.GetPool<RotateToDirection>().Add(entity.index);
             ecsWorld.GetPool<PlayerTag>().Add(entity.index);
             ecsWorld.GetPool<FireByMouse>().Add(entity.index);
+            ref var hpcomponent = ref ecsWorld.GetPool<HPBarComponent>().Add(entity.index);
             ref var inventory = ref ecsWorld.GetPool<InventoryComponent>().Add(entity.index);
 
             
@@ -37,6 +40,7 @@ namespace Client
             health.maxValue = hp;
             impactDamage.hits = new List<float>();
             inventory.items = new List<Entity>();
+            hpcomponent.HPtext = HPBarTextobject;
         }
     }
 }
