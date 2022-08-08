@@ -24,6 +24,7 @@ namespace Client
             systems.Add(new TargetingAtPlayerSystem());
 
             systems.Add(new DirectionByMouseSystem());
+            systems.Add(new JoystickShootingSystem());
             systems.Add(new RotationLikeParentSystem());
             systems.Add(new PositionLikeParentSystem());
             systems.Add(new DirectionAtTargetSystem());
