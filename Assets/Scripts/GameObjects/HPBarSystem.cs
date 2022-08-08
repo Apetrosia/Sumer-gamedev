@@ -20,6 +20,7 @@ namespace Client
         {
             foreach (var entity in filter.Value)
             {
+                if (playerFilter.Value.GetEntitiesCount() <= 0) continue;
                 ref var playerDamaged = ref damagedPool.Value.Get(playerFilter.Value.GetRawEntities()[0]);
                 ref var hpcomponent = ref HPBarPool.Value.Get(entity);
                 hpcomponent.HPtext.text = $"Player Health: {System.Math.Round(playerDamaged.currentHealth)}";
