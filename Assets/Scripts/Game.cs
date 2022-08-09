@@ -24,23 +24,29 @@ namespace Client
             systems.Add(new TargetingAtPlayerSystem());
 
             systems.Add(new DirectionByMouseSystem());
+            systems.Add(new JoystickShootingSystem());
             systems.Add(new RotationLikeParentSystem());
             systems.Add(new PositionLikeParentSystem());
             systems.Add(new DirectionAtTargetSystem());
             systems.Add(new VelocityByDirectionSystem());
+            systems.Add(new JoystickMovementComponentSystem());
             systems.Add(new AnimationSpeedByVelocitySystem());
+            //systems.Add(new CameraTargetSystem());
+            
 
             systems.Add(new CreateWeaponSystem());
             systems.Add(new SetWeaponSystem());
 
             systems.Add(new FireAutoClearSystem());
             systems.Add(new FireByMouseSystem());
+            systems.Add(new FireByJoystickSystem());
             systems.Add(new FireIfTargetSystem());
             systems.Add(new ParticlesPlayIfFireSystem());
             systems.Add(new GunControlSystem());
 
             systems.Add(new DamageParticleCollidedSystem());
             systems.Add(new ImpactDamageSystem());
+            systems.Add(new HPBarSystem());
 
             systems.Add(new DeadSystem());
             systems.Add(new DeadByHealthSystem());
