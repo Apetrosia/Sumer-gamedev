@@ -29,6 +29,8 @@ namespace Client
             systems.Add(new DirectionAtTargetSystem());
             systems.Add(new VelocityByDirectionSystem());
             systems.Add(new AnimationSpeedByVelocitySystem());
+            //systems.Add(new CameraTargetSystem());
+            
 
             systems.Add(new CreateWeaponSystem());
             systems.Add(new SetWeaponSystem());
