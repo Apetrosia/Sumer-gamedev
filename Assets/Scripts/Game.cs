@@ -24,6 +24,7 @@ namespace Client
             systems.Add(new TargetingAtPlayerSystem());
 
             systems.Add(new DirectionByMouseSystem());
+            systems.Add(new JoystickShootingSystem());
             systems.Add(new RotationLikeParentSystem());
             systems.Add(new PositionLikeParentSystem());
             systems.Add(new DirectionAtTargetSystem());
@@ -36,6 +37,7 @@ namespace Client
 
             systems.Add(new FireAutoClearSystem());
             systems.Add(new FireByMouseSystem());
+            systems.Add(new FireByJoystickSystem());
             systems.Add(new FireIfTargetSystem());
             systems.Add(new ParticlesPlayIfFireSystem());
             systems.Add(new GunControlSystem());
