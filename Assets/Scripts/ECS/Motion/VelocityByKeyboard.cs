@@ -2,5 +2,6 @@ namespace Client
 {
     struct VelocityByKeyboard
     {
+
     }
 }
