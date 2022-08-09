@@ -19,18 +19,21 @@ namespace Client
         {
             base.InitEntity(ecsWorld); // ref var velocity = ref ecsWorld.GetPool<VelocityByKeyboard>().Add(entity.index);
 
+            joystick = GameObject.FindGameObjectWithTag("MovementJS").GetComponent<FixedJoystick>();
+            joystick1 = GameObject.FindGameObjectWithTag("ShootingJS").GetComponent<FixedJoystick>();
+
             ref var body = ref ecsWorld.GetPool<BodyComponent>().Add(entity.index);
 #if !(UNITY_ANDROID)
             ecsWorld.GetPool<VelocityByKeyboard>().Add(entity.index); // создаем компонент
             ecsWorld.GetPool<DirectionByMouse>().Add(entity.index);
             ecsWorld.GetPool<FireByMouse>().Add(entity.index);
+            GameObject.FindGameObjectWithTag("MovementJS").SetActive(false);
+            GameObject.FindGameObjectWithTag("ShootingJS").SetActive(false);
 #endif
 #if (UNITY_ANDROID || UNITY_EDITOR)
             ref var js = ref ecsWorld.GetPool<JoystickMovementComponent>().Add(entity.index);
             ref var js1 = ref ecsWorld.GetPool<JoystickShooting>().Add(entity.index);
             ecsWorld.GetPool<FireByJoystick>().Add(entity.index);
-            joystick = GameObject.FindGameObjectWithTag("MovementJS").GetComponent<FixedJoystick>();
-            joystick1 = GameObject.FindGameObjectWithTag("ShootingJS").GetComponent<FixedJoystick>();
             js.joystick = joystick;
             js1.joystick = joystick1;
 #endif
