@@ -31,7 +31,6 @@ namespace Client
             
             ref var inventory = ref ecsWorld.GetPool<InventoryComponent>().Add(entity.index);
 
-            
             body.value = GetComponent<Rigidbody2D>();
             speed.value = this.speed;
             createWeapon.weapon = defaultWeapon;
