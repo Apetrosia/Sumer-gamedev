@@ -122,7 +122,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   speed: 5
-  defaultWeapon: {fileID: 5384816603759678016, guid: e7d1d4f9c8ee4e2458d6d3764489c952, type: 3}
+  defaultWeapon: {fileID: 4151506439131253766, guid: fa2526b85ae407848b610c8dbf98c406, type: 3}
+  joystick: {fileID: 0}
+  joystick1: {fileID: 0}
 --- !u!58 &2721849400935461338
 CircleCollider2D:
   m_ObjectHideFlags: 0
