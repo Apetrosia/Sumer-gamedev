@@ -10,7 +10,6 @@ namespace Client
 
         readonly EcsPoolInject<BodyComponent> bodyPool = default;
         readonly EcsPoolInject<VelocityByKeyboard> keyControlPool = default;
-        public FixedJoystick fj;
         readonly EcsPoolInject<Speed> speedPool = default;
 
         public void Run(IEcsSystems systems)
