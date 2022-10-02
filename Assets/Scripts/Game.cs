@@ -24,10 +24,12 @@ brhevfbgejbgdgefglkndegvnfkdv
             systems.Add(new TargetingAtPlayerSystem());
 
             systems.Add(new DirectionByMouseSystem());
+            systems.Add(new JoystickShootingSystem());
             systems.Add(new RotationLikeParentSystem());
             systems.Add(new PositionLikeParentSystem());
             systems.Add(new DirectionAtTargetSystem());
             systems.Add(new VelocityByDirectionSystem());
+            systems.Add(new JoystickMovementComponentSystem());
             systems.Add(new AnimationSpeedByVelocitySystem());
             //systems.Add(new CameraTargetSystem());
             
@@ -37,6 +39,7 @@ brhevfbgejbgdgefglkndegvnfkdv
 
             systems.Add(new FireAutoClearSystem());
             systems.Add(new FireByMouseSystem());
+            systems.Add(new FireByJoystickSystem());
             systems.Add(new FireIfTargetSystem());
             systems.Add(new ParticlesPlayIfFireSystem());
             systems.Add(new GunControlSystem());

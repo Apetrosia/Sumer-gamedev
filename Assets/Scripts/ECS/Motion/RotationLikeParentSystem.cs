@@ -8,7 +8,6 @@ namespace Client
     {
         readonly EcsWorldInject ecsWorld = default;
         readonly EcsFilterInject<Inc<RotationLikeParent, TransformComponent, Parent>> filter = default;
-
         readonly EcsPoolInject<Parent> parentPool = default;
         readonly EcsPoolInject<TransformComponent> transformPool = default;
 
