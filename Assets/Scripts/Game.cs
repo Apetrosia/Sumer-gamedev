@@ -14,7 +14,7 @@ namespace Client
         {
             var world = new EcsWorld();
             systems = new EcsSystems(world);
-
+brhevfbgejbgdgefglkndegvnfkdv
             systems.Add(new InitSystem());
 
             systems.Add(new PeriodicTimerSystem());
