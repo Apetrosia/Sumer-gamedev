@@ -6,7 +6,7 @@ namespace Client
 {
     sealed class VelocityByDirectionSystem : IEcsRunSystem
     {
-        readonly EcsFilterInject<Inc<VelocityByDirection, BodyComponent, Direction, Speed>, Exc<JoystickMovementComponent>> filter = default;
+        readonly EcsFilterInject<Inc<VelocityByDirection, BodyComponent, Direction, Speed>> filter = default;
 
         readonly EcsPoolInject<BodyComponent> bodyPool = default;
         readonly EcsPoolInject<Direction> directionPool = default;
